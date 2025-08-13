@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div
+      class="quote-app"
+      role="application"
+      aria-label="Random Quote Generator"
+    >
+      <header class="app-header">
+        <h1>🌟 Random Quote Generator</h1>
+      </header>
+
+      <section class="controls" aria-label="Filters">
+        <label for="category">Category:</label>
+        <select id="category" name="category" aria-label="Quote category">
+          <option value="all" selected>All</option>
+          <!-- More categories injected by JS -->
+        </select>
+      </section>
+
+      <main class="quote-area" aria-live="polite">
+        <figure class="quote">
+          <blockquote>
+            <p id="quote-text"><!-- Quote text goes here --></p>
+          </blockquote>
+        </figure>
+
+        <nav class="actions" aria-label="Quote actions">
+          <button id="favorite-btn" type="button" aria-label="Add to favorites">
+            ❤️ Favorite
+          </button>
+          <button id="new-quote-btn" type="button" aria-label="Get a new quote">
+            🔄 New Quote
+          </button>
+          <button id="share-btn" type="button" aria-label="Share this quote">
+            📤 Share
+          </button>
+        </nav>
+      </main>
+
+      <aside class="favorites">
+        <details>
+          <summary>Favorites</summary>
+          <ul id="favorites-list">
+            <!-- Favorite quotes injected by JS -->
+          </ul>
+        </details>
+      </aside>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
