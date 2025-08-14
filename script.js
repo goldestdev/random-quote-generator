@@ -1,19 +1,11 @@
 "use strict";
 let categoryEl = document.getElementById("category");
 const quoteText = document.getElementById("quote-text");
-const favoriteBtn = document.getElementById("favorite-btn");
-const newQuoteBtn = document.getElementById("new-quote-btn");
-const shareBtn = document.getElementById("share-btn");
 const favoritesList = document.getElementById("favorites-list");
+const actions = document.querySelector(".actions");
+
 //safe DOM check
-if (
-  !categoryEl ||
-  !quoteText ||
-  !favoriteBtn ||
-  !newQuoteBtn ||
-  !shareBtn ||
-  !favoritesList
-) {
+if (!categoryEl || !quoteText || !favoritesList || !actions) {
   console.error("One or more required elements are missing from the DOM.");
   throw new Error("Missing DOM elements");
 }
@@ -93,11 +85,13 @@ function groupQuotesByCategory() {
 // Inject Categories to DOM
 function createCategoryOptions() {
   const categories = Object.keys(groupQuotesByCategory());
+  const fragment = document.createDocumentFragment();
   categories.forEach((category) => {
     const option = document.createElement("option");
-    categoryEl.append(option);
     option.textContent = category;
+    fragment.append(option);
   });
+  categoryEl.append(fragment);
 }
 
 // generate by categories
@@ -110,6 +104,7 @@ function generateQuotesByCategories() {
     const randomQuote =
       quotesInCategory[Math.floor(Math.random() * quotesInCategory.length)];
     quoteText.textContent = randomQuote;
+    // exixted in html:   <option value="all" selected>All</option>
   } else if (categoryEl.value === "all") {
     generateRandomQuote();
   } else {
@@ -123,11 +118,13 @@ const addToFavorites = () => favorites.add(quoteText.textContent);
 function displayFavorites() {
   addToFavorites();
   favoritesList.innerHTML = "";
+  const fragment = document.createDocumentFragment();
   [...favorites].forEach((favorite) => {
     const item = document.createElement("li");
     item.textContent = favorite;
-    favoritesList.append(item);
+    fragment.append(item);
   });
+  favoritesList.append(fragment);
 }
 
 //share
@@ -142,9 +139,13 @@ function shareQuote() {
 
 //event listeners
 categoryEl.addEventListener("change", generateQuotesByCategories);
-newQuoteBtn.addEventListener("click", generateQuotesByCategories);
-favoriteBtn.addEventListener("click", displayFavorites);
-shareBtn.addEventListener("click", shareQuote);
+
+actions.addEventListener("click", (e) => {
+  if (e.target.matches("#favorite-btn")) displayFavorites();
+  if (e.target.matches("#new-quote-btn")) generateQuotesByCategories();
+  if (e.target.matches("#share-btn")) shareQuote();
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   createCategoryOptions();
   generateRandomQuote();
