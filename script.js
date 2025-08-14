@@ -65,6 +65,64 @@ const quotes = [
     quote: "Kick the door down — you can apologize later.",
     category: "Chaotic Motivation",
   },
+  {
+    quote: "You can’t fix stupid, but you can stop hanging out with it.",
+    category: "Blunt Truths",
+  },
+  {
+    quote:
+      "Growth feels like losing your mind until you settle into the new one.",
+    category: "Blunt Truths",
+  },
+  {
+    quote: "You’ll never feel confident doing something for the first time.",
+    category: "Blunt Truths",
+  },
+  {
+    quote: "Nobody’s thinking about you as much as you think they are.",
+    category: "Blunt Truths",
+  },
+  {
+    quote: "Not every chapter of your life needs an audience.",
+    category: "Blunt Truths",
+  },
+  {
+    quote: "Some people aren’t toxic, they’re just idiots in high definition.",
+    category: "Petty Wisdom",
+  },
+  {
+    quote: "Kill them with kindness, but make sure they know you’re aiming.",
+    category: "Petty Wisdom",
+  },
+  {
+    quote: "Don’t take criticism from someone you wouldn’t take advice from.",
+    category: "Petty Wisdom",
+  },
+  { quote: "Silence is an underrated power move.", category: "Petty Wisdom" },
+  {
+    quote: "You can’t argue with stupid, but you can outlive them.",
+    category: "Petty Wisdom",
+  },
+  {
+    quote: "Fear is just your brain’s way of asking for popcorn.",
+    category: "Chaotic Motivation",
+  },
+  {
+    quote: "If it scares you, it’s probably worth doing.",
+    category: "Chaotic Motivation",
+  },
+  {
+    quote: "Make reckless decisions responsibly.",
+    category: "Chaotic Motivation",
+  },
+  {
+    quote: "You can’t make an omelette without breaking a few egos.",
+    category: "Chaotic Motivation",
+  },
+  {
+    quote: "Confidence is 10% skill, 90% pretending you own the place.",
+    category: "Chaotic Motivation",
+  },
 ];
 
 //random
