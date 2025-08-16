@@ -123,6 +123,57 @@ const quotes = [
     quote: "Confidence is 10% skill, 90% pretending you own the place.",
     category: "Chaotic Motivation",
   },
+  {
+    quote: "People rarely change; they just get better at hiding who they are.",
+    category: "Blunt Truths",
+  },
+  {
+    quote: "If it costs you your peace, it’s overpriced.",
+    category: "Blunt Truths",
+  },
+  {
+    quote: "You are replaceable at work. Everywhere else? Priceless.",
+    category: "Blunt Truths",
+  },
+  { quote: "Comfort is more dangerous than risk.", category: "Blunt Truths" },
+  {
+    quote: "You’ll never run out of excuses, only time.",
+    category: "Blunt Truths",
+  },
+  { quote: "Petty is just justice with better PR.", category: "Petty Wisdom" },
+  {
+    quote: "If someone ghosts you, haunt them with your success.",
+    category: "Petty Wisdom",
+  },
+  {
+    quote: "Play dumb until it’s profitable to be smart.",
+    category: "Petty Wisdom",
+  },
+  { quote: "Not all attention is worth having.", category: "Petty Wisdom" },
+  {
+    quote: "Sometimes you win just by not caring anymore.",
+    category: "Petty Wisdom",
+  },
+  {
+    quote: "Do it badly until you do it well.",
+    category: "Chaotic Motivation",
+  },
+  {
+    quote: "Act like the main character — the universe loves drama.",
+    category: "Chaotic Motivation",
+  },
+  {
+    quote: "Burn the safety net; you’ll climb faster without it.",
+    category: "Chaotic Motivation",
+  },
+  {
+    quote: "If you’re not a little scared, you’re probably bored.",
+    category: "Chaotic Motivation",
+  },
+  {
+    quote: "Chaos is just creativity without a leash.",
+    category: "Chaotic Motivation",
+  },
 ];
 
 //random
